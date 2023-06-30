@@ -1,1 +1,1 @@
-# [Transitions and Animations in Svelte](https://www.youtube.com/watch?v=5oEo98BrRqs)¸
+# [Transitions and Animations in Svelte](https://www.youtube.com/watch?v=5oEo98BrRqs)
