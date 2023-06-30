@@ -1,13 +1,7 @@
 <script>
-  import { elasticOut } from 'svelte/easing'
+  import { fade } from 'svelte/transition'
   let showing = false
 
-  function custom(node, params) {
-    return {
-      easing: params.easing,
-      css: (t, u) => `transform: translatex(${u * 200}px) scale(${t})`
-    }
-  }
 </script>
 
 <main>
@@ -16,7 +10,7 @@
     <input bind:checked={showing} type="checkbox" />
   </label>
   {#if showing}
-    <div transition:custom={{ easing: elasticOut }} />
+    <div transition:fade />
   {/if}
 </main>
 
