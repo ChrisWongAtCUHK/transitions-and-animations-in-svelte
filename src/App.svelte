@@ -1,38 +1,14 @@
 <script>
-  import { fade, slide, fly } from 'svelte/transition'
-  import { elasticOut } from 'svelte/easing'
-  let showing = false
+	import Tab1 from './ElasticOut.svelte';
+  import Tabs from './Tabs.svelte';
 
-  function custom(node, params) {
-    return {
-      easing: params.easing,
-      css: (t, u) => `transform: translatex(${u * 200}px) scale(${t})`
-    }
-  }
+  // List of tab items with labels, values and assigned components
+  let items = [
+    { label: 'Elastic Out',
+		 value: 1,
+		 component: Tab1
+		}
+  ];
 </script>
 
-<main>
-  <label>
-    Showing
-    <input bind:checked={showing} type="checkbox" />
-  </label>
-  {#if showing}
-    <div transition:custom={{ easing: elasticOut }} />
-  {/if}
-</main>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-    padding-block-start: 10rem;
-  }
-
-  div {
-    height: 200px;
-    width: 200px;
-    background: goldenrod;
-  }
-</style>
+<Tabs {items} />
