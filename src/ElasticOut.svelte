@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    padding-block-start: 10rem;
   }
 
   div {
